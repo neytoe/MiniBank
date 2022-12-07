@@ -7,21 +7,23 @@ namespace DirectIDAssessment.Service
     public class Calculator : ICalculator
     {
 
-        public List<EndOfDayBalance> GetCustomerDailyBalance(Customer CustomerInfo){
+        public EndOfDayBalance GetCustomerDailyBalance(Customer customerInfo, DateTime date){
             
-            var dailyTransactions = CustomerInfo.accounts.SelectMany(x => x.transactions).GroupBy(x => x.bookingDate).OrderBy(x => x.Key).ToList();
-            var currentbalance = CustomerInfo.accounts[0].balances.current.amount;
+            var dailyTransactions = customerInfo.Accounts[0]?.Transactions.GroupBy(x => Convert.ToDateTime(x.BookingDate.ToShortDateString())).OrderBy(x => x.Key).ToList();
+            var currentbalance = customerInfo.Accounts[0].Balances.Current.Amount;
             
             var endofDayBalances = calculateCustomerDailyBalance(dailyTransactions, currentbalance);
 
-            return endofDayBalances.OrderBy(x => x.Day).ToList();
+            var item = endofDayBalances.Where(x => x.Day.ToShortDateString() == date.ToShortDateString()).Select(x => x).FirstOrDefault();
+
+            return item ;
         }
 
    
 
         public Customer GetCustomerAcoountInfo()
         {
-            string customerProfile = System.IO.File.ReadAllText(@"./Apollo/apollo-carter.json");
+            string customerProfile = File.ReadAllText(@"./MockDb/apollo-carter.json");
             var customerAccount = JsonSerializer.Deserialize<Customer>(customerProfile, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
             return customerAccount;
         }
@@ -32,8 +34,8 @@ namespace DirectIDAssessment.Service
             var endOfDayBalances = new List<EndOfDayBalance>();
             foreach (var transactions in dailyTransactions)
             {
-                var credit = transactions.Where(x => x.creditDebitIndicator == "Credit").Sum(x => x.amount);
-                var debit = transactions.Where(x => x.creditDebitIndicator == "Debit").Sum(x => x.amount);
+                var credit = transactions.Where(x => x.CreditDebitIndicator == "Credit").Sum(x => x.Amount);
+                var debit = transactions.Where(x => x.CreditDebitIndicator == "Debit").Sum(x => x.Amount);
                 var closingbalance = currentBalance + credit - debit;
                 var balance = new EndOfDayBalance()
                 {

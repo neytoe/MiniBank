@@ -1,7 +1,6 @@
 using DirectIDAssessment.Interface;
 using DirectIDAssessment.Model;
 using Microsoft.AspNetCore.Mvc;
-using System.Text.Json;
 
 namespace DirectIDAssessment.Controllers
 {
@@ -9,26 +8,30 @@ namespace DirectIDAssessment.Controllers
     [Route("[controller]")]
     public class AccountController : ControllerBase
     {
-        private readonly ILogger<AccountController> _logger;
         private readonly ICalculator _calculator;
+        private readonly ILogger<Account> _accountsLogger;
 
-        public AccountController(ILogger<AccountController> logger, ICalculator calculator)
+        public AccountController(ICalculator calculator, ILogger<Account> accountsLogger)
         {
-            _logger = logger;
             _calculator = calculator;
+            _accountsLogger = accountsLogger;
         }
 
         [HttpGet("GetBalanceByDate/{date}")]
-        public object GetBalanceByDate(DateTime date)
+        public IActionResult GetBalanceByDate(DateTime date)
         {
-            var customerAccountDetails = _calculator.GetCustomerAcoountInfo();
-            var result = _calculator.GetCustomerDailyBalance(customerAccountDetails);
-            //var currbalance = result.Where(x => x.Day < Convert.ToDateTime(date.ToShortDateString())).Sum(x => x.Balance) + root.accounts[0].balances.current.amount;
-            var item = result.Where(x => x.Day == date.AddDays(-1)).Select(x => x).FirstOrDefault();
+            try
+            {
+                var customerAccountDetails = _calculator.GetCustomerAcoountInfo();
+                var result = _calculator.GetCustomerDailyBalance(customerAccountDetails, date);
 
-            
-            
-            return item;
+                return Ok(result);
+            }
+            catch (Exception  ex)
+            {
+                _accountsLogger.LogError(ex.Message, ex);
+                return BadRequest("An error occured");
+            }
         }
     }
 }

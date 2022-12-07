@@ -5,7 +5,6 @@ C:\Users\hp\source\repos\DirectIDAssessment\DirectIDAssessment\obj\Debug\net6.0\
 C:\Users\hp\source\repos\DirectIDAssessment\DirectIDAssessment\obj\Debug\net6.0\DirectIDAssessment.csproj.CoreCompileInputs.cache
 C:\Users\hp\source\repos\DirectIDAssessment\DirectIDAssessment\obj\Debug\net6.0\DirectIDAssessment.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\hp\source\repos\DirectIDAssessment\DirectIDAssessment\obj\Debug\net6.0\DirectIDAssessment.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\hp\source\repos\DirectIDAssessment\DirectIDAssessment\bin\Debug\net6.0\Apollo\apollo-carter.json
 C:\Users\hp\source\repos\DirectIDAssessment\DirectIDAssessment\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\hp\source\repos\DirectIDAssessment\DirectIDAssessment\bin\Debug\net6.0\appsettings.json
 C:\Users\hp\source\repos\DirectIDAssessment\DirectIDAssessment\bin\Debug\net6.0\DirectIDAssessment.exe
@@ -26,3 +25,4 @@ C:\Users\hp\source\repos\DirectIDAssessment\DirectIDAssessment\obj\Debug\net6.0\
 C:\Users\hp\source\repos\DirectIDAssessment\DirectIDAssessment\obj\Debug\net6.0\ref\DirectIDAssessment.dll
 C:\Users\hp\source\repos\DirectIDAssessment\DirectIDAssessment\obj\Debug\net6.0\DirectIDAssessment.pdb
 C:\Users\hp\source\repos\DirectIDAssessment\DirectIDAssessment\obj\Debug\net6.0\DirectIDAssessment.genruntimeconfig.cache
+C:\Users\hp\source\repos\DirectIDAssessment\DirectIDAssessment\bin\Debug\net6.0\MockDb\apollo-carter.json
