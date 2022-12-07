@@ -1,6 +1,6 @@
-## MiniBank" 
-An API that calculates debits/credits of customer returning closing balance per day.
+##MiniBank" 
+####An API that calculates debits/credits of customer returning closing balance per day.
 
-# Technologies used
+####### Technologies used
 C#
 .NET 6
