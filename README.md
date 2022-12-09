@@ -8,7 +8,7 @@ C#
 
 
 #### Testing Steps
-=> Run this project
-=> Run this project (https://github.com/neytoe/MiniBankUI)
-=> Select a date fron the UI (Date ranges that correspond to the json file) to get expected result.
+Run this project <br>
+Run this project (https://github.com/neytoe/MiniBankUI) <br>
+Select a date fron the UI (Date ranges that correspond to the json file) to get expected result <br>
 
