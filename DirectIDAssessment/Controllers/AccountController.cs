@@ -24,7 +24,7 @@ namespace DirectIDAssessment.Controllers
             {
                 var customerAccountDetails = _calculator.GetCustomerAcoountInfo();
                 var result = _calculator.GetCustomerDailyBalance(customerAccountDetails, date);
-
+                if (result == null) return NoContent();
                 return Ok(result);
             }
             catch (Exception  ex)

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hp\\source\\repos\\DirectIDAssessment\\DirectIDAssessment\\DirectIDAssessment.csproj": {}
+    "C:\\Users\\hp\\source\\repos\\DirectIDChallenge\\BankAPI\\DirectIDAssessment\\DirectIDAssessment.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hp\\source\\repos\\DirectIDAssessment\\DirectIDAssessment\\DirectIDAssessment.csproj": {
+    "C:\\Users\\hp\\source\\repos\\DirectIDChallenge\\BankAPI\\DirectIDAssessment\\DirectIDAssessment.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hp\\source\\repos\\DirectIDAssessment\\DirectIDAssessment\\DirectIDAssessment.csproj",
+        "projectUniqueName": "C:\\Users\\hp\\source\\repos\\DirectIDChallenge\\BankAPI\\DirectIDAssessment\\DirectIDAssessment.csproj",
         "projectName": "DirectIDAssessment",
-        "projectPath": "C:\\Users\\hp\\source\\repos\\DirectIDAssessment\\DirectIDAssessment\\DirectIDAssessment.csproj",
+        "projectPath": "C:\\Users\\hp\\source\\repos\\DirectIDChallenge\\BankAPI\\DirectIDAssessment\\DirectIDAssessment.csproj",
         "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hp\\source\\repos\\DirectIDAssessment\\DirectIDAssessment\\obj\\",
+        "outputPath": "C:\\Users\\hp\\source\\repos\\DirectIDChallenge\\BankAPI\\DirectIDAssessment\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
